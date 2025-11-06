@@ -1,0 +1,62 @@
+{
+  "title": "mcp-file-manager",
+  "version": "1.0.0",
+  "description": "Especificação simplificada de endpoints MCP File Manager",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/healthz",
+      "description": "Verifica se o servidor está ativo"
+    },
+    {
+      "method": "GET",
+      "path": "/resources/files/list",
+      "description": "Lista todos os arquivos e pastas dentro da sandbox"
+    },
+    {
+      "method": "GET",
+      "path": "/resources/files/preview",
+      "query": {
+        "path": "string",
+        "max_lines": "int",
+        "max_bytes": "int"
+      },
+      "description": "Pré-visualiza parte de um arquivo texto"
+    },
+    {
+      "method": "POST",
+      "path": "/tools/rename_file",
+      "body": {
+        "src": "string",
+        "dst": "string"
+      },
+      "description": "Renomeia um arquivo dentro da sandbox"
+    },
+    {
+      "method": "POST",
+      "path": "/tools/move_file",
+      "body": {
+        "src": "string",
+        "dst_dir": "string"
+      },
+      "description": "Move um arquivo para outro diretório dentro da sandbox"
+    },
+    {
+      "method": "POST",
+      "path": "/tools/summarize_text",
+      "body": {
+        "path": "string",
+        "max_chars": "int"
+      },
+      "description": "Retorna um resumo (stub) das primeiras linhas de um arquivo texto"
+    },
+    {
+      "method": "POST",
+      "path": "/tools/build_index",
+      "body": {
+        "out": "string"
+      },
+      "description": "Gera um índice Markdown com todos os arquivos da sandbox"
+    }
+  ]
+}

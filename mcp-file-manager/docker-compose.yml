@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  mcp-file-manager:
+    build: ./server
+    container_name: mcp-file-manager
+    image: mcp-file-manager:latest
+    environment:
+      - SANDBOX_ROOT=/app/sandbox
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./server/sandbox:/app/sandbox
+    restart: unless-stopped

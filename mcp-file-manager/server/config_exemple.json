@@ -1,0 +1,15 @@
+{
+  "sandbox_root": "/app/sandbox",
+  "preview": {
+    "max_lines": 40,
+    "max_bytes": 4000
+  },
+  "security": {
+    "allow_write": true,
+    "block_outside_sandbox": true
+  },
+  "logging": {
+    "level": "info",
+    "save_history": false
+  }
+}
