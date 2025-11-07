@@ -104,4 +104,11 @@ def build_index(req: BuildIndexReq):
             except Exception:
                 pass
             lines.append(f"- `{rel}` — {title or 'arquivo'}")
-        els
+        else:
+            lines.append(f"- **{rel}/**")
+    out = safe(req.out)
+    out.write_text("\n".join(lines), encoding="utf-8")
+    return {"ok": True, "index_path": req.out}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8765)

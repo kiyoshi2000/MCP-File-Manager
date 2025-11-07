@@ -1,0 +1,1 @@
+Targeting companies with large markets, sustainable competitive advantages and strong price momentum, the Large Cap Growth Fund seeks to harness the return potential of America’s fastest-growing companies.
