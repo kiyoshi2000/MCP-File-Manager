@@ -1,15 +1,13 @@
 # MCP File Manager
 
-Um **mini-servidor MCP** didático que dá a um agente acesso **controlado** a uma pasta *sandbox*:
-- `resources` para **listar e pré-visualizar** arquivos;
-- `tools` para **renomear**, **mover** e **gerar índice** (`index.md`);
-- pronto para ser plugado a um cliente/LLM depois.
-
-> **Sem monitoramento.** **Sem n8n.** Apenas **MCP básico** e seguro.
+**MCP File Manager** is a lightweight demonstration of the *Model Context Protocol* concept.  
+It exposes a secure sandbox directory through a small HTTP API built with **FastAPI**,  
+so an agent (or a human) can list, read, move, rename, and summarize files safely.
 
 ---
 
-## 🚀 Como rodar (Docker)
+## Quick Start
+
+### 1. Run with Docker
 ```bash
 docker compose up --build
-# servidor disponível em http://localhost:8765
